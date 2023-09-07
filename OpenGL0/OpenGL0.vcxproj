@@ -142,8 +142,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CreateWindow_exercise.cpp" />
     <ClCompile Include="ex_Square.cpp" />
     <ClCompile Include="glad.c" />
+    <ClCompile Include="pr_1.cpp" />
+    <ClCompile Include="pr_2.cpp" />
     <ClCompile Include="소스.cpp" />
     <ClCompile Include="Pratice_triangle.cpp" />
   </ItemGroup>
