@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\YT">
+      <UniqueIdentifier>{dfbac1fd-abc3-4ed7-b4e4-5fa2426ee84a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\WEB">
+      <UniqueIdentifier>{1c7e6625-3358-4ce8-971e-37dba07507ad}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="소스.cpp">
@@ -21,20 +27,23 @@
     <ClCompile Include="glad.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Pratice_triangle.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="CreateWindow_exercise.cpp">
+      <Filter>소스 파일\YT</Filter>
     </ClCompile>
     <ClCompile Include="ex_Square.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\WEB</Filter>
     </ClCompile>
     <ClCompile Include="pr_1.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\WEB</Filter>
     </ClCompile>
     <ClCompile Include="pr_2.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\WEB</Filter>
     </ClCompile>
-    <ClCompile Include="CreateWindow_exercise.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="Pratice_triangle.cpp">
+      <Filter>소스 파일\WEB</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateTriangle_Tuto.cpp">
+      <Filter>소스 파일\YT</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
