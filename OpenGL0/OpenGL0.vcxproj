@@ -118,6 +118,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <DisableSpecificWarnings>4819;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -144,12 +145,27 @@
   <ItemGroup>
     <ClCompile Include="CreateTriangle_Tuto.cpp" />
     <ClCompile Include="CreateWindow_exercise.cpp" />
+    <ClCompile Include="EBO.cpp" />
     <ClCompile Include="ex_Square.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="pr_1.cpp" />
     <ClCompile Include="pr_2.cpp" />
-    <ClCompile Include="소스.cpp" />
+    <ClCompile Include="shaderClass.cpp" />
+    <ClCompile Include="UseIndexBuffer.cpp" />
+    <ClCompile Include="VAO.cpp" />
+    <ClCompile Include="VBO.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Pratice_triangle.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="default.frag" />
+    <None Include="default.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EBO.h" />
+    <ClInclude Include="shaderClass.h" />
+    <ClInclude Include="VAO.h" />
+    <ClInclude Include="VBO.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

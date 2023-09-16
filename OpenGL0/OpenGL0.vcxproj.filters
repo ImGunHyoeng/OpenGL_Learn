@@ -19,9 +19,12 @@
     <Filter Include="소스 파일\WEB">
       <UniqueIdentifier>{1c7e6625-3358-4ce8-971e-37dba07507ad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="리소스 파일\Shaders">
+      <UniqueIdentifier>{a555e476-0349-4621-acab-66cd944e553e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="소스.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="glad.c">
@@ -45,5 +48,42 @@
     <ClCompile Include="CreateTriangle_Tuto.cpp">
       <Filter>소스 파일\YT</Filter>
     </ClCompile>
+    <ClCompile Include="UseIndexBuffer.cpp">
+      <Filter>소스 파일\YT</Filter>
+    </ClCompile>
+    <ClCompile Include="shaderClass.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="VBO.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="EBO.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="VAO.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="default.vert">
+      <Filter>리소스 파일\Shaders</Filter>
+    </None>
+    <None Include="default.frag">
+      <Filter>리소스 파일\Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="shaderClass.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="VBO.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="EBO.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="VAO.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
