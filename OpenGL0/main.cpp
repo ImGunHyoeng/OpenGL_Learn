@@ -16,13 +16,13 @@ GLfloat vertices[] =
 	//0.5f,0.5f * float(sqrt(3)) / 3,0.0f,*/
 	//0.0f,-0.5f * float(sqrt(3)) / 3,0.0f,
 	//0.5f,-0.5f * float(sqrt(3)) / 3,0.0f,
-	//0.0f,0.5f * float(sqrt(3)) * 2 / 3,0.0f,
-	-0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f, // Lower left corner
-	0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f, // Lower right corner
-	0.0f, 0.5f * float(sqrt(3)) * 2 / 3, 0.0f, // Upper corner
-	-0.5f / 2, 0.5f * float(sqrt(3)) / 6, 0.0f, // Inner left
-	0.5f / 2, 0.5f * float(sqrt(3)) / 6, 0.0f, // Inner right
-	0.0f, -0.5f * float(sqrt(3)) / 3, 0.0f // Inner down
+	//0.0f,0.5f * float(sqrt(3)) * 2 / 3,0.0f,   color
+	-0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f ,	0.8f,0.3f,0.02f, // Lower left corner
+	0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f,		0.2f,0.3f,0.01f,  // Lower right corner
+	0.0f, 0.5f * float(sqrt(3)) * 2 / 3, 0.0f,	0.5f,0.5f,0.2f,  // Upper corner
+	-0.5f / 2, 0.5f * float(sqrt(3)) / 6, 0.0f,	0.7f,0.7f,0.52f,  // Inner left
+	0.5f / 2, 0.5f * float(sqrt(3)) / 6, 0.0f,	0.8f,0.15f,0.72f,  // Inner right
+	0.0f, -0.5f * float(sqrt(3)) / 3, 0.0f,		0.9f,0.4f,0.92f  // Inner down
 };
 
 GLuint indices[]=
@@ -102,10 +102,13 @@ int main()
 	VBO VBO1(vertices, sizeof(vertices));
 	EBO EBO1(indices, sizeof(indices));
 
-	VAO1.LinkVBO(VBO1, 0);
+	VAO1.LinkAttrib(VBO1, 0,3,GL_FLOAT,6*sizeof(float),(void*)0);
+	VAO1.LinkAttrib(VBO1, 1,3,GL_FLOAT,6*sizeof(float),(void*)(3*sizeof(float)));
 	VAO1.Unbind();
 	VBO1.Unbind();
 	EBO1.Unbind();
+
+	GLuint uniID = glGetUniformLocation(shaderProgram.ID, "scale");
 
 
 	////glBindBuffer(GL_ARRAY_BUFFER, 0);
@@ -128,6 +131,7 @@ int main()
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		shaderProgram.Activate();
+		glUniform1f(uniID, 0.5f);
 		//glBindVertexArray(VAOs[0]);
 		VAO1.Bind();
 		//glDrawArrays(GL_LINE_LOOP, 0, 4);//그리고 싶은 모양 설정 ,시작 정점의 위치, 그리는 정점의 수
